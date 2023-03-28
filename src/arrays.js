@@ -2,7 +2,7 @@
 
 //1. Crie uma função que dobre o numero
 function dobrarNumero(numero) {
-  
+  return numero*2;
 }
 
 console.log(dobrarNumero(5)); // saída esperada: 10
@@ -10,7 +10,11 @@ console.log(dobrarNumero(5)); // saída esperada: 10
 
 //2. Crie uma função que receba um array de números como parâmetro e retorne a soma dos valores deste array
 function somarNumeros(numeros) {
- 
+ let soma = 0;
+  for (let i = 0; i < array.length; i++) {
+    soma += array[i];
+  }
+  return soma;
 }
 
 console.log(somarNumeros([1, 2, 3, 4, 5])); // saída esperada: 15
