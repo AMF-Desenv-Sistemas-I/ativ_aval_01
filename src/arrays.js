@@ -1,6 +1,6 @@
 // ARRAYS
 
-//1. Crie uma função que receba um número como parâmetro e retorne true se ele for par ou false se ele for ímpar
+//1. Crie uma função que dobre o numero
 function dobrarNumero(numero) {
   
 }
