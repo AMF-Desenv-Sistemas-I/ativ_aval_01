@@ -21,8 +21,8 @@ ATIVIDADE AVALIATIVA
 -   Se não estiver, mude para a branch `main`
     -   Exemplo: `git checkout main`
 -   Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    -   Você deve criar uma branch no seguinte formato: `seunome-nomecolega`
-    -   Exemplo: `git checkout -b mariasilva-joaoalves`
+    -   Você deve criar uma branch no seguinte formato: `primeiro-segundo`
+    -   Exemplo: `git checkout -b felipe-nunes`
 
 4.  Quando fizer mudanças, adicione-as ao *stage* do Git e faça um `commit`
 
@@ -39,7 +39,7 @@ ATIVIDADE AVALIATIVA
 
 5.  Adicione a sua branch com o novo `commit` ao repositório remoto
 
--   Usando o exemplo anterior: `git push -u origin mariasilva-joaoalves`
+-   Usando o exemplo anterior: `git push -u origin felipe-nunes`
 
 6.  Crie um novo `Pull Request` *(PR)*
 
