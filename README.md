@@ -54,6 +54,10 @@ ATIVIDADE AVALIATIVA
 
 7. Obrigatório que todos os códigos estejam comentados.
 
+8. Para rodar seu projeto, execute o comando npm run dev
+
+9. Para rodar os testes, rode o comando npm run test
+
 ## LISTA DE EXERCÍCIOS AVALIATIVOS
 
 ### ARRAYS
