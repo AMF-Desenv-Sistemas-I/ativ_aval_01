@@ -1,146 +1,188 @@
 // 1. Crie uma função que receba um objeto como parâmetro e retorne um array contendo as chaves desse objeto
 function obterChaves(objeto) {
-    
+  return Object.keys(objeto) //usa a funcao nativa que retorna o array das chaves do objeto
 }
 
-console.log(obterChaves({ nome: 'Fulano', idade: 30, profissao: 'Programador' })); // saída esperada: ['nome', 'idade', 'profissao']
-console.log(obterChaves({ a: 1, b: 2, c: 3 })); // saída esperada: ['a', 'b', 'c']
+console.log(
+  obterChaves({ nome: "Fulano", idade: 30, profissao: "Programador" })
+) // saída esperada: ['nome', 'idade', 'profissao']
+console.log(obterChaves({ a: 1, b: 2, c: 3 })) // saída esperada: ['a', 'b', 'c']
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 2. Dada uma lista de objetos que representam pessoas, crie uma nova lista com o nome de cada pessoa em maiúsculas e retorne essa lista
 function PessoasMaiusculas() {
-    const pessoasX = [
-        { nome: "João", idade: 20 },
-        { nome: "Maria", idade: 30 },
-        { nome: "Pedro", idade: 25 },
-    ];
+  const pessoasX = [
+    { nome: "João", idade: 20 },
+    { nome: "Maria", idade: 30 },
+    { nome: "Pedro", idade: 25 },
+  ]
+
+  return pessoasX.map((pessoa) => pessoa.nome.toUpperCase()) //usa o map para executar a funcao toUpperCase em cada nome
 }
-PessoasMaiusculas(); // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
+PessoasMaiusculas() // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 3. Dada uma lista de objetos que representam produtos, crie uma nova lista com o preço de cada produto com desconto de 10% e retorne essa lista
 function ProdutosPrecoDesconto() {
-    const produtosX = [
-        { nome: "Camiseta", preco: 30 },
-        { nome: "Calça", preco: 50 },
-        { nome: "Jaqueta", preco: 100 },
-    ];
+  const produtosX = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Jaqueta", preco: 100 },
+  ]
+
+  return produtosX.map((produto) => produto.preco * 0.9) //usa o map para executar o calculo do desconto em cada produto
 }
-ProdutosPrecoDesconto(); // saída esperada: [27, 45, 90]
+ProdutosPrecoDesconto() // saída esperada: [27, 45, 90]
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 4. Dada uma lista de objetos que representam pessoas, crie uma nova lista com as pessoas maiores de idade (idade >= 18) e retorne essa lista
 function PessoasMaiorIdade() {
-    const pessoasY = [
-        { nome: "João", idade: 20 },
-        { nome: "Maria", idade: 15 },
-        { nome: "Pedro", idade: 25 },
-    ];
+  const pessoasY = [
+    { nome: "João", idade: 20 },
+    { nome: "Maria", idade: 15 },
+    { nome: "Pedro", idade: 25 },
+  ]
+
+  return pessoasY.filter((pessoa) => pessoa.idade >= 18) //usa o fitler para retornar o array de objetos a partir da condicao idade >= 18
 }
 
-PessoasMaiorIdade(); // saída esperada: [{ nome: "João", idade: 20 }, { nome: "Pedro", idade: 25 }]
+PessoasMaiorIdade() // saída esperada: [{ nome: "João", idade: 20 }, { nome: "Pedro", idade: 25 }]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 5. Dada uma lista de strings, crie uma nova lista com as strings que têm mais de 5 caracteres e retorne essa lista
 function StringCincoCaracteres() {
-    const palavrasX = ["gato", "cachorro", "leão", "tartaruga"];
+  const palavrasX = ["gato", "cachorro", "leão", "tartaruga"]
+
+  return palavrasX.filter((palavra) => palavra.length > 5) //usa o fitler para retornar o array de objetos que passam na condicao length > 5 
 }
-StringCincoCaracteres(); // saída esperada: ["cachorro", "tartaruga"]
+StringCincoCaracteres() // saída esperada: ["cachorro", "tartaruga"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6. Dada uma lista de objetos que representam produtos, crie uma nova lista com os produtos que custam mais de 50 reais e retorne essa lista
 function ProdutosMaioresCinquenta() {
-    const produtosY = [
-        { nome: "Camiseta", preco: 30 },
-        { nome: "Calça", preco: 50 },
-        { nome: "Jaqueta", preco: 100 },
-    ];
+  const produtosY = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Jaqueta", preco: 100 },
+  ]
+
+  return produtosY.filter((produto) => produto.preco > 50) //usa o fitler para retornar o array de objetos passam na condicao preco > 50
 }
 
-ProdutosMaioresCinquenta(); // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
+ProdutosMaioresCinquenta() // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 7. Dada uma lista de objetos que representam produtos, calcule o preço total de todos eles e retorne esse valor
 function CalculaPrecoTotal() {
-    const produtosZ = [
-        { nome: "Camiseta", preco: 30 },
-        { nome: "Calça", preco: 50 },
-        { nome: "Jaqueta", preco: 100 },
-    ];
+  const produtosZ = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Jaqueta", preco: 100 },
+  ]
+  let preco = 0 //variavel para acumular os valores
+  produtosZ.forEach((produto) => (preco += produto.preco)) //soma o preco de cada produto a variavel acumuladora
+  return preco
 }
-CalculaPrecoTotal(); // saída esperada: 180
+CalculaPrecoTotal() // saída esperada: 180
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 8. Dada uma lista de objetos que representam alunos, imprima no console o nome de cada um deles
 function ListaObjetoAlunos() {
-    const alunos = [
-        { nome: "João", idade: 18 },
-        { nome: "Maria", idade: 20 },
-        { nome: "Pedro", idade: 22 },
-    ];
+  const alunos = [
+    { nome: "João", idade: 18 },
+    { nome: "Maria", idade: 20 },
+    { nome: "Pedro", idade: 22 },
+  ]
+
+  return alunos.map((aluno) => aluno.nome) //usa o map para retornar um array de nomes
 }
 
-ListaObjetoAlunos();
+ListaObjetoAlunos()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 9. Dada uma lista de objetos que representam produtos, calcule o preço total de todos eles e imprima no console
 function ListaObjetosProdutos() {
-    const produtosA = [
-        { nome: "Camiseta", preco: 30 },
-        { nome: "Calça", preco: 50 },
-        { nome: "Jaqueta", preco: 100 },
-    ];
+  const produtosA = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Jaqueta", preco: 100 },
+  ]
+  //igual a 7
+  let preco = 0
+  produtosA.forEach((produto) => (preco += produto.preco))
+  return preco
 }
 
-ListaObjetosProdutos();
+ListaObjetosProdutos()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 10. Dada uma lista de produtos, verifique se todos têm um preço maior que R$ 10,00
 function ListaProdutoMaiorQueDez() {
-    const produtosB = [
-        { nome: "Camiseta", preco: 30 },
-        { nome: "Calça", preco: 50 },
-        { nome: "Jaqueta", preco: 100 },
-    ];
+  const produtosB = [
+    { nome: "Camiseta", preco: 30 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Jaqueta", preco: 100 },
+  ]
+
+  return produtosB.every((produto) => produto.preco > 10) //funcao every verifica se todos os elementos do array passam na condicao preco > 10
 }
-ListaProdutoMaiorQueDez();
+ListaProdutoMaiorQueDez()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 11. Dada uma lista de nomes, verifique se pelo menos um deles começa com a letra "A”
 function NomeComLetraA() {
-    const nomes = ["Pedro", "Ana", "Carla", "Márcio"];
+  const nomes = ["Pedro", "Ana", "Carla", "Márcio"]
+
+  return nomes.some((nome) => nome[0] === "A") //funcao some verifica pelo menos um elemento do array passa na condicao. [0] para pegar a primeira posicao da string
 }
 
-NomeComLetraA();
+NomeComLetraA()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 12. Dado um array de objetos, encontre o objeto com o nome "João”
-function ArrayObjetosJoao(){
-    const pessoasA = [
-        { nome: "Ana", idade: 30 },
-        { nome: "João", idade: 25 },
-        { nome: "Maria", idade: 40 },
-    ];
+function ArrayObjetosJoao() {
+  const pessoasA = [
+    { nome: "Ana", idade: 30 },
+    { nome: "João", idade: 25 },
+    { nome: "Maria", idade: 40 },
+  ]
+
+  return pessoasA.find((pessoa) => pessoa.nome === "João") //funcao find encontra o objeto que passa na condicao
 }
 
-ArrayObjetosJoao();
+ArrayObjetosJoao()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 13. Dado um array de objetos, encontre o objeto com a maior idade
-function ArrayObjetosMaiorIdade(){
-    const pessoasB = [
-        { nome: "Ana", idade: 30 },
-        { nome: "João", idade: 25 },
-        { nome: "Maria", idade: 40 },
-    ];
+function ArrayObjetosMaiorIdade() {
+  const pessoasB = [
+    { nome: "Ana", idade: 30 },
+    { nome: "João", idade: 25 },
+    { nome: "Maria", idade: 40 },
+  ]
+  let maior = 0; //variavel para salvar o maior valor
+  pessoasB.forEach( pessoa => {
+    if (pessoa.idade > maior) maior = pessoa.idade;// se idade da pessoa for maior que a anterior, salva ela na variavel maior
+  })
+  return (pessoasB.filter( pessoa => pessoa.idade == maior)[0]);// usar o filtar com a maior idade como condicao
 }
 
-ArrayObjetosMaiorIdade();
+ArrayObjetosMaiorIdade()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 export {
-    obterChaves, PessoasMaiusculas, ProdutosPrecoDesconto, PessoasMaiorIdade,
-    StringCincoCaracteres, ProdutosMaioresCinquenta, CalculaPrecoTotal, ListaObjetoAlunos, ListaObjetosProdutos,
-    ListaProdutoMaiorQueDez, NomeComLetraA, ArrayObjetosJoao, ArrayObjetosMaiorIdade
-};
+  obterChaves,
+  PessoasMaiusculas,
+  ProdutosPrecoDesconto,
+  PessoasMaiorIdade,
+  StringCincoCaracteres,
+  ProdutosMaioresCinquenta,
+  CalculaPrecoTotal,
+  ListaObjetoAlunos,
+  ListaObjetosProdutos,
+  ListaProdutoMaiorQueDez,
+  NomeComLetraA,
+  ArrayObjetosJoao,
+  ArrayObjetosMaiorIdade,
+}
