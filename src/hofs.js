@@ -1,6 +1,6 @@
 // 1. Crie uma função que receba um objeto como parâmetro e retorne um array contendo as chaves desse objeto
 function obterChaves(objeto) {
-  return Object.keys(objeto)
+  return Object.keys(objeto) //usa a funcao nativa que retorna o array das chaves do objeto
 }
 
 console.log(
@@ -17,7 +17,7 @@ function PessoasMaiusculas() {
     { nome: "Pedro", idade: 25 },
   ]
 
-  return pessoasX.map((pessoa) => pessoa.nome.toUpperCase())
+  return pessoasX.map((pessoa) => pessoa.nome.toUpperCase()) //usa o map para executar a funcao toUpperCase em cada nome
 }
 PessoasMaiusculas() // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,7 +30,7 @@ function ProdutosPrecoDesconto() {
     { nome: "Jaqueta", preco: 100 },
   ]
 
-  return produtosX.map((produto) => produto.preco * 0.9)
+  return produtosX.map((produto) => produto.preco * 0.9) //usa o map para executar o calculo do desconto em cada produto
 }
 ProdutosPrecoDesconto() // saída esperada: [27, 45, 90]
 
@@ -44,7 +44,7 @@ function PessoasMaiorIdade() {
     { nome: "Pedro", idade: 25 },
   ]
 
-  return pessoasY.filter((pessoa) => pessoa.idade >= 18)
+  return pessoasY.filter((pessoa) => pessoa.idade >= 18) //usa o fitler para retornar o array de objetos a partir da condicao idade >= 18
 }
 
 PessoasMaiorIdade() // saída esperada: [{ nome: "João", idade: 20 }, { nome: "Pedro", idade: 25 }]
@@ -54,7 +54,7 @@ PessoasMaiorIdade() // saída esperada: [{ nome: "João", idade: 20 }, { nome: "
 function StringCincoCaracteres() {
   const palavrasX = ["gato", "cachorro", "leão", "tartaruga"]
 
-  return palavrasX.filter((palavra) => palavra.length > 5)
+  return palavrasX.filter((palavra) => palavra.length > 5) //usa o fitler para retornar o array de objetos que passam na condicao length > 5 
 }
 StringCincoCaracteres() // saída esperada: ["cachorro", "tartaruga"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,7 +67,7 @@ function ProdutosMaioresCinquenta() {
     { nome: "Jaqueta", preco: 100 },
   ]
 
-  return produtosY.filter((produto) => produto.preco > 50)
+  return produtosY.filter((produto) => produto.preco > 50) //usa o fitler para retornar o array de objetos passam na condicao preco > 50
 }
 
 ProdutosMaioresCinquenta() // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
@@ -80,8 +80,8 @@ function CalculaPrecoTotal() {
     { nome: "Calça", preco: 50 },
     { nome: "Jaqueta", preco: 100 },
   ]
-  let preco = 0
-  produtosZ.forEach((produto) => (preco += produto.preco))
+  let preco = 0 //variavel para acumular os valores
+  produtosZ.forEach((produto) => (preco += produto.preco)) //soma o preco de cada produto a variavel acumuladora
   return preco
 }
 CalculaPrecoTotal() // saída esperada: 180
@@ -95,7 +95,7 @@ function ListaObjetoAlunos() {
     { nome: "Pedro", idade: 22 },
   ]
 
-  return alunos.map((aluno) => aluno.nome)
+  return alunos.map((aluno) => aluno.nome) //usa o map para retornar um array de nomes
 }
 
 ListaObjetoAlunos()
@@ -108,7 +108,7 @@ function ListaObjetosProdutos() {
     { nome: "Calça", preco: 50 },
     { nome: "Jaqueta", preco: 100 },
   ]
-
+  //igual a 7
   let preco = 0
   produtosA.forEach((produto) => (preco += produto.preco))
   return preco
@@ -125,7 +125,7 @@ function ListaProdutoMaiorQueDez() {
     { nome: "Jaqueta", preco: 100 },
   ]
 
-  return produtosB.every((produto) => produto.preco > 10)
+  return produtosB.every((produto) => produto.preco > 10) //funcao every verifica se todos os elementos do array passam na condicao preco > 10
 }
 ListaProdutoMaiorQueDez()
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,7 +134,7 @@ ListaProdutoMaiorQueDez()
 function NomeComLetraA() {
   const nomes = ["Pedro", "Ana", "Carla", "Márcio"]
 
-  return nomes.some((nome) => nome[0] === "A")
+  return nomes.some((nome) => nome[0] === "A") //funcao some verifica pelo menos um elemento do array passa na condicao. [0] para pegar a primeira posicao da string
 }
 
 NomeComLetraA()
@@ -148,7 +148,7 @@ function ArrayObjetosJoao() {
     { nome: "Maria", idade: 40 },
   ]
 
-  return pessoasA.find((pessoa) => pessoa.nome === "João")
+  return pessoasA.find((pessoa) => pessoa.nome === "João") //funcao find encontra o objeto que passa na condicao
 }
 
 ArrayObjetosJoao()
@@ -161,11 +161,11 @@ function ArrayObjetosMaiorIdade() {
     { nome: "João", idade: 25 },
     { nome: "Maria", idade: 40 },
   ]
-  let maior = 0;
+  let maior = 0; //variavel para salvar o maior valor
   pessoasB.forEach( pessoa => {
-    if (pessoa.idade > maior) maior = pessoa.idade;
+    if (pessoa.idade > maior) maior = pessoa.idade;// se idade da pessoa for maior que a anterior, salva ela na variavel maior
   })
-  return (pessoasB.filter( pessoa => pessoa.idade == maior)[0]);
+  return (pessoasB.filter( pessoa => pessoa.idade == maior)[0]);// usar o filtar com a maior idade como condicao
 }
 
 ArrayObjetosMaiorIdade()
