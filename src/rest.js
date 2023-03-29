@@ -1,6 +1,7 @@
 // 1. Crie uma função que recebe um número indeterminado de parâmetros e retorne a soma desses parâmetros
 function somar(...numeros) {
-   
+    const soma = numeros.reduce((acumulador, numero) => acumulador + numero);
+    return soma;
 }
 
 console.log(somar(1, 2, 3, 4, 5)); // saída esperada: 15
