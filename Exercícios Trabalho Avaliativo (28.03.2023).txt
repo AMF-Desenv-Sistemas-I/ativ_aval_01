@@ -1,0 +1,236 @@
+Nome: Michel Matias Schmengler
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ARRAYS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		01. Crie uma função que receba um número como parâmetro e retorne true se ele for par ou false
+		se ele for ímpar.
+		*/
+
+		function ParImpar(numero) { // declaração da função
+
+			var n = prompt("Digite um numero"); // usuário recebe a mensagem para digitar o número
+			var total=n%2; // fórmula de divisão entre o número inserido pelo usuário por 2
+			if(n%2==0){ // condição que verifica se o resto do número dividido por 2 é igual a 0
+    		alert(true); // se sim, retorna um alerta de true no navegador
+			}
+			if(n%2==1){ // condição que verifica se o resto do número dividido por 2 é igual a 1
+    		alert(false); // se sim, retorna um alerta de false no navegador
+			}
+			alert(total); // retorna o resultado da divisão
+
+		}; // fim do código
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		02. Crie uma função que receba um array de números como parâmetro e retorne a soma dos valores
+		deste array.
+		*/
+
+		function soma(valorA, valorB) { // função soma que recebe dois valores como parâmetro
+			return valorA + valorB; // retorna o valor da soma dos dois valores da chamada da função
+		};
+
+		console.log(soma(10, 11)); // imprime o valor da soma dos dois números no navegador
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		03. Crie uma função que receba um array de números como parâmetro e retorne outro array
+		contendo apenas os números pares.
+		*/
+
+		function retornaNNumerosPares(n) { // declaração da função com parâmetro
+    		let numerosPares = []; // array vazio que receberá os devidos números, conforme sequência do código
+    		for (let i = 0; numerosPares.length < n; i++) { // laço for que recebe a sequência de números desde a posição 0, incrementa, até chegar à posição final no array
+        	if (i % 2 == 0) { // condição que verifica se o resto da divisão por 2 é igual a 0
+            	numerosPares.push(i); // adiciona os números com push em sequência no array
+        	}
+    		}
+    	return numerosPares; // retorno da função de números pares
+		}
+
+		console.log(retornaNNumerosPares(5)); // imprime o array novo com apenas os números pares
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		04. Crie uma função que receba um array de números como parâmetro e retorne outro array
+		contendo apenas os números ímpares.
+		*/
+
+		function retornaNNumerosImpares(n) { // declaração da função com parâmetro
+    		let numerosImpares = []; // array vazio que receberá os devidos números, conforme sequência do código
+    		for (let i = 0; numerosImpares.length < n; i++) { // laço for que recebe a sequência de números desde a posição 0, incrementa, até chegar à posição final no array
+        	if (i % 2 != 0) { // condição que verifica se o resto da divisão por 2 é diferente de 0
+            	numerosImpares.push(i); // adiciona os números com push em sequência no array
+        	}
+    		}
+    	return numerosImpares; // retorno da função de números ímpares
+		}
+
+		console.log(retornaNNumerosImpares(5)); // imprime o array novo com apenas os números ímpares
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		05. Crie uma função que receba um array de números como parâmetro e retorne outro array
+		contendo apenas os números maiores que 10.
+		*/
+
+		function retornaNNumeros(n) { // declaração da função com parâmetro
+    		let numeros = []; // array vazio que receberá os devidos números, conforme sequência do código
+    		for (let i = 0; numeros.length < n; i++) { // laço for que recebe a sequência de números desde a posição 0, incrementa, até chegar à posição final no array
+        	if (i >= 10) { // condição que verifica se a sequência de números é maior ou igual a 10
+            	numeros.push(i); // adiciona os números com push em sequência no array
+        	}
+    		}
+    	return numeros; // retorno da função de números pares
+		}
+
+		console.log(retornaNNumeros(10)); // imprime o array novo com apenas os números pares
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		06. Crie uma função que receba dois arrays como parâmetros e retorne outro array contendo
+		a concatenação dos dois primeiros.
+		*/
+
+		function concatenaArray(n) { // declaração da função com parâmetro
+    		let numeros1 = [12, 15, 3]; // primeiro array de números declarado
+			let numeros2 = [292, 412, 995]; // segundo array de números declarado
+            let concatenado = numeros1.concat(numeros2); // concatenação dos dois primeiros array em um novo
+    		}
+
+		console.log(concatenado); // imprime o novo array com a concatenação do array 1 e 2
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REST
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		/*
+		01. Crie uma função que recebe um número indeterminado de parâmetros e retorne a soma desses
+		parâmetros.
+		*/
+
+		function soma(...numeros) { // declaração da função com número indeterminado de parâmetros
+  		let total = 0; // declaração de variável inicial em 0
+  		for (let numero of numeros) { // laço for com declaração dos números desde a posição 0
+    		total += numero; // incremento
+  		}
+  		return total; // retorno dos números
+		}
+		console.log(soma(1, 2, 3)); // imprime a soma dos números da função
+		console.log(soma(4, 5, 6, 7)); // imprime a soma dos números da função
+
+	</script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
