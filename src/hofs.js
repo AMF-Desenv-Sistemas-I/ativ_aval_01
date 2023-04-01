@@ -15,8 +15,8 @@ function PessoasMaiusculas() {
         { nome: "Pedro", idade: 25 },
     ];
 
-    const nomesUpercase = pessoasX.map(pessoa => pessoa.nome.toUpperCase())
-    return nomesUpercase
+    const nomesUpercase = pessoasX.map(pessoa => pessoa.nome.toUpperCase());
+    return nomesUpercase;
 }
 PessoasMaiusculas(); // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,9 +28,9 @@ function ProdutosPrecoDesconto() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
-    
-    const produtosDesconto = produtosX.map(produto => produto.preco - (produto.preco * 0.10))
-    return produtosDesconto
+
+    const produtosDesconto = produtosX.map(produto => produto.preco - (produto.preco * 0.10));
+    return produtosDesconto;
 }
 ProdutosPrecoDesconto(); // saída esperada: [27, 45, 90]
 
@@ -44,8 +44,8 @@ function PessoasMaiorIdade() {
         { nome: "Pedro", idade: 25 },
     ];
 
-    const pessoas = pessoasY.filter(pessoa => pessoa.idade >= 18)
-    return pessoas
+    const pessoas = pessoasY.filter(pessoa => pessoa.idade >= 18);
+    return pessoas;
 }
 
 PessoasMaiorIdade(); // saída esperada: [{ nome: "João", idade: 20 }, { nome: "Pedro", idade: 25 }]
@@ -55,8 +55,8 @@ PessoasMaiorIdade(); // saída esperada: [{ nome: "João", idade: 20 }, { nome: 
 function StringCincoCaracteres() {
     const palavrasX = ["gato", "cachorro", "leão", "tartaruga"];
 
-    const palavras = palavrasX.filter(palavra => palavra.length > 5)
-    return palavras
+    const palavras = palavrasX.filter(palavra => palavra.length > 5);
+    return palavras;
 }
 StringCincoCaracteres(); // saída esperada: ["cachorro", "tartaruga"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,8 +69,8 @@ function ProdutosMaioresCinquenta() {
         { nome: "Jaqueta", preco: 100 },
     ];
 
-    const produtos = produtosY.filter(produto => produto.preco > 50)
-    return produtos
+    const produtos = produtosY.filter(produto => produto.preco > 50);
+    return produtos;
 }
 
 ProdutosMaioresCinquenta(); // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
@@ -85,7 +85,7 @@ function CalculaPrecoTotal() {
     ];
 
     const total = produtosZ.reduce((acumulador, produto) => acumulador + produto.preco, 0);
-    return total
+    return total;
 }
 CalculaPrecoTotal(); // saída esperada: 180
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -128,12 +128,8 @@ function ListaProdutoMaiorQueDez() {
         { nome: "Jaqueta", preco: 100 },
     ];
 
-    const produtos = produtosB.filter(produto => produto.preco > 10)
-    if (produtos.length >= 3) {
-        return true;
-    }
-
-    return false;
+    const validated = produtosB.every(produto => produto.preco > 10);
+    return validated;
 }
 ListaProdutoMaiorQueDez();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -141,9 +137,9 @@ ListaProdutoMaiorQueDez();
 // 11. Dada uma lista de nomes, verifique se pelo menos um deles começa com a letra "A”
 function NomeComLetraA() {
     const nomes = ["Pedro", "Ana", "Carla", "Márcio"];
-    
+
     const validated = nomes.some(nome => nome.includes("A"));
-    return validated
+    return validated;
 }
 
 NomeComLetraA();
@@ -157,8 +153,8 @@ function ArrayObjetosJoao() {
         { nome: "Maria", idade: 40 },
     ];
 
-    const pessoa = pessoasA.find(pessoa => pessoa.nome === "João")
-    return pessoa
+    const pessoa = pessoasA.find(pessoa => pessoa.nome === "João");
+    return pessoa;
 }
 
 ArrayObjetosJoao();
@@ -171,11 +167,11 @@ function ArrayObjetosMaiorIdade() {
         { nome: "João", idade: 25 },
         { nome: "Maria", idade: 40 },
     ];
-    
-    const pessoa = pessoasB.reduce(function(prev, current) {
+
+    const pessoa = pessoasB.reduce(function (prev, current) {
         return (prev.idade > current.idade) ? prev : current
     })
-    return pessoa
+    return pessoa;
 }
 
 ArrayObjetosMaiorIdade();
