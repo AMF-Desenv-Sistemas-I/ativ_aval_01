@@ -5,7 +5,7 @@ function obterChaves(objeto) {
 
 console.log(obterChaves({ nome: 'Fulano', idade: 30, profissao: 'Programador' })); // saída esperada: ['nome', 'idade', 'profissao']
 console.log(obterChaves({ a: 1, b: 2, c: 3 })); // saída esperada: ['a', 'b', 'c']
-//Comentário: Nesta function 
+//Comentário: Foi feito o retorno por meio da Object que pegou apenas as chaves direto. 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 2. Dada uma lista de objetos que representam pessoas, crie uma nova lista com o nome de cada pessoa em maiúsculas e retorne essa lista
@@ -36,6 +36,8 @@ function ProdutosPrecoDesconto() {
 }
 ProdutosPrecoDesconto(); // saída esperada: [27, 45, 90]
 
+//Comentário: Foi criado uma const produtos, onde foi pego os dados da produtosX e usado o map para servir como um for,
+// porém, mais simplificado para correr e pela arrow function calcular o preco - 0.10 .
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 4. Dada uma lista de objetos que representam pessoas, crie uma nova lista com as pessoas maiores de idade (idade >= 18) e retorne essa lista
@@ -62,7 +64,8 @@ function StringCincoCaracteres() {
 }
 StringCincoCaracteres(); // saída esperada: ["cachorro", "tartaruga"]
 
-//Comentário: Nesta function foi usado o filter para que pegasse apenas as palavras que tivessem mais de 5 caracteres.
+//Comentário: Nesta function foi usado o filter para filtrar apenas as palavras que tivessem mais de 5 caracteres,
+//ou seja, as mariores que 5.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 6. Dada uma lista de objetos que representam produtos, crie uma nova lista com os produtos que custam mais de 50 reais e retorne essa lista
@@ -78,7 +81,7 @@ function ProdutosMaioresCinquenta() {
 
 ProdutosMaioresCinquenta(); // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
 
-//Comentário: Foi usado o every até encontrar em todos os valores que tem preço maior que 50 reais.
+//Comentário: Foi usado o filter até encontrar em todos os valores que tem preço maior que 50 reais.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 7. Dada uma lista de objetos que representam produtos, calcule o preço total de todos eles e retorne esse valor
@@ -141,6 +144,8 @@ function ListaProdutoMaiorQueDez() {
     return maior;
 }
 ListaProdutoMaiorQueDez();
+
+//Comentário: Foi usado o every, até que ele encontrasse um elemento que no caso seria os maiores que 10.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 11. Dada uma lista de nomes, verifique se pelo menos um deles começa com a letra "A”
@@ -152,6 +157,9 @@ function NomeComLetraA() {
 }
 
 NomeComLetraA();
+
+//Comentário: foi usado o some na const para verificar se era verdadeiro se uma das palavras começava com A e o
+//includes que determina se um conjunto de caracteres pode ser encontrado.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 12. Dado um array de objetos, encontre o objeto com o nome "João”
@@ -166,6 +174,9 @@ function ArrayObjetosJoao(){
 }
 
 ArrayObjetosJoao();
+
+//Comentário: Foi usado o find para verificar se tal nome existe na const pessoasA, senão existisse ele retornaria,
+//undefined.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 13. Dado um array de objetos, encontre o objeto com a maior idade
@@ -182,6 +193,9 @@ function ArrayObjetosMaiorIdade(){
 }
 
 ArrayObjetosMaiorIdade();
+
+//Comentário: Foi criada uma função dentro do pessoasB.reduce com duas variaveis que depois embaixo,
+//no retorno iriam pegar as maiores idades que seriam o previous.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 export {

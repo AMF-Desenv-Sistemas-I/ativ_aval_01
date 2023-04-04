@@ -8,8 +8,7 @@ function dobrarNumero(numero) {
 
 console.log(dobrarNumero(5)); // saída esperada: 10
 
-//Comentário: Nesta function foi usado um laço de repetição para os números que correcem nele. Depois do laço seriam
-//multiplicados por dois que assim daria o dobro de cada número do laço sendo retornado pelo array criado que faz a multiplicação.
+//Comentário: Nesta function foi feito um retorno, calculando os numeros por dois que da o dobro.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //2. Crie uma função que receba um array de números como parâmetro e retorne a soma dos valores deste array
@@ -19,8 +18,8 @@ function somarNumeros(numeros) {
 
 console.log(somarNumeros([1, 2, 3, 4, 5])); // saída esperada: 15
 
-//Comentário: Nesta function foi usado um laço de repetição para os números que correcem nele junto com numeros o lenght para manipulação  da sequência.
-//Depois do laço seriam somados pela variavel soma que pegando os números e fazendo soma + os numeros de i por dois que assim daria a soma.
+//Comentário: Nesta foi usado um reduce para pegar todos os elementos e esperar uma regra que na qual é a soma,
+//onde foi criado para o retorno o acumulador + o numero pela arrow function.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //3. Crie uma função que receba um array de números como parâmetro e retorne outro array contendo apenas os números pares
@@ -31,8 +30,8 @@ function filtrarNumerosPares(numeros) {
 
 console.log(filtrarNumerosPares([1, 2, 3, 4, 5, 6, 7, 8])); // saída esperada: [2, 4, 6, 8]
 
-//Comentário: Nesta function foi usado um laço de repetição para os números que correcem nele junto com numeros o lenght para manipulação  da sequência.
-//Depois do laço fiz uma condição para definir os numeros dividindo por 2 e retornando o array depois com apenas os números pares.
+//Comentário: Foi usado o filter para pegar todos os elementos e por meio do numero pelo % 2 que vai apresentar,
+//todos os numeros pares se forem iguais a zero.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //4. Crie uma função que receba um array de números como parâmetro e retorne outro array contendo apenas os números ímpares.
@@ -43,9 +42,8 @@ function filtrarNumerosImpares(numeros) {
 
 console.log(filtrarNumerosImpares([1, 2, 3, 4, 5, 6, 7, 8])); // saída esperada: [1, 3, 5, 7]
 
-//Comentário: Nesta function foi usado um laço de repetição para os números que correcem nele junto com numeros o lenght para manipulação  da sequência.
-//Depois do laço fiz uma condição para definir os numeros dividindo por 2, mas vendo se era diferente ou igual a zero quenos revela os numeros impares e retorna
-// o array depois com apenas os números impares.
+//Comentário: Foi usado o filter para pegar todos os elementos e por meio do numero pelo % 2 que vai apresentar,
+//todos os numeros impares se forem diferentes ou iguais a zero.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 5.Crie uma função que receba um array de números como parâmetro e retorne outro array contendo apenas os números maiores que 10
@@ -55,8 +53,8 @@ function filtrarNumerosMaioresQueDez(numeros) {
 
 console.log(filtrarNumerosMaioresQueDez([5, 10, 15, 20, 25])); // saída esperada: [15, 20, 25]
 
-//Comentário: Nesta function foi usado um laço de repetição para os números que correcem nele junto com numeros o lenght para manipulação  da sequência.
-//Depois do laço fiz uma condição para definir os numeros que eram maiores ou iguais a 10, e assim obtive o resultado apenos com os numeros maiores que 10.
+//Comentário: Foi usado o filter para pegar todos os elementos e depois na arrow function feita a condição para,
+//pegar todos os numeros maiores que 10.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 // 6. Crie uma função que receba dois arrays como parâmetros e retorne outro array contendo a concatenação dos dois primeiros
