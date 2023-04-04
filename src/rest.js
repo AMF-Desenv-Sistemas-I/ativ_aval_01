@@ -1,15 +1,30 @@
 // 1. Crie uma função que recebe um número indeterminado de parâmetros e retorne a soma desses parâmetros
-function somar(...numeros) {
-   
+function somar(...numeros) { // esta sendo definido que não tem um limite fixo de números
+    let resultado = 0; // definindo para resultado começar em 0
+    let qtd = numeros.length  //  vai receber o tamanho de números (quantidade de parâmetros)
+    for(let i=0; i<qtd; i++){  //  laço para percorrer
+      resultado += numeros[i]  //  vai fazendo a soma dos números
+    }
+    return resultado  // retorna a soma dos números
 }
 
 console.log(somar(1, 2, 3, 4, 5)); // saída esperada: 15
 console.log(somar(10, 20, 30)); // saída esperada: 60
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
+
+
+
 // 2. Crie uma função que recebe um número indeterminado de parâmetros e retorne a média desses parâmetros
-function calcularMedia(...numeros) {
-   
+function calcularMedia(...numeros) {  // esta sendo definido que não tem um limite fixo de números
+    if (numeros.length === 0) {
+        return 0;
+    }
+    let soma = 0;
+    for (let numero of numeros) {
+        soma += numero;
+    }
+    return soma / numeros.length;
 }
 
 console.log(calcularMedia(1, 2, 3, 4, 5)); // saída esperada: 3
