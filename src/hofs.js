@@ -1,5 +1,7 @@
 // 1. Crie uma função que receba um objeto como parâmetro e retorne um array contendo as chaves desse objeto
 function obterChaves(objeto) {
+    const array=[];
+
     
 }
 
@@ -14,6 +16,7 @@ function PessoasMaiusculas() {
         { nome: "Maria", idade: 30 },
         { nome: "Pedro", idade: 25 },
     ];
+    pessoasX->nome.toUpperCase();
 }
 PessoasMaiusculas(); // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,6 +28,8 @@ function ProdutosPrecoDesconto() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+    
+    
 }
 ProdutosPrecoDesconto(); // saída esperada: [27, 45, 90]
 
