@@ -1,6 +1,7 @@
 // 1. Crie uma função que receba um objeto como parâmetro e retorne um array contendo as chaves desse objeto
 function obterChaves(objeto) {
-    
+    const objectKeys = Object.keys(objeto);
+    return objectKeys;
 }
 
 console.log(obterChaves({ nome: 'Fulano', idade: 30, profissao: 'Programador' })); // saída esperada: ['nome', 'idade', 'profissao']
@@ -14,6 +15,10 @@ function PessoasMaiusculas() {
         { nome: "Maria", idade: 30 },
         { nome: "Pedro", idade: 25 },
     ];
+
+    const upperNames = pessoasX.map(person => person.nome.toUpperCase());
+    return upperNames;
+
 }
 PessoasMaiusculas(); // saída esperada: ["JOÃO", "MARIA", "PEDRO"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,6 +30,9 @@ function ProdutosPrecoDesconto() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+
+    const newPrices = produtosX.map(price => price.preco * 0.9);
+    return newPrices;
 }
 ProdutosPrecoDesconto(); // saída esperada: [27, 45, 90]
 
@@ -37,6 +45,9 @@ function PessoasMaiorIdade() {
         { nome: "Maria", idade: 15 },
         { nome: "Pedro", idade: 25 },
     ];
+
+    const ofAge = pessoasY.filter(person => person.idade >= 18);
+    return ofAge;
 }
 
 PessoasMaiorIdade(); // saída esperada: [{ nome: "João", idade: 20 }, { nome: "Pedro", idade: 25 }]
@@ -45,6 +56,9 @@ PessoasMaiorIdade(); // saída esperada: [{ nome: "João", idade: 20 }, { nome: 
 // 5. Dada uma lista de strings, crie uma nova lista com as strings que têm mais de 5 caracteres e retorne essa lista
 function StringCincoCaracteres() {
     const palavrasX = ["gato", "cachorro", "leão", "tartaruga"];
+
+    const longWords = palavrasX.filter(word => word.length > 5);
+    return longWords;
 }
 StringCincoCaracteres(); // saída esperada: ["cachorro", "tartaruga"]
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,6 +70,10 @@ function ProdutosMaioresCinquenta() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+
+    const filtered = produtosY.filter(product => product.preco > 50);
+    return filtered;
+
 }
 
 ProdutosMaioresCinquenta(); // saída esperada: [{ nome: "Jaqueta", preco: 100 }]
@@ -68,6 +86,10 @@ function CalculaPrecoTotal() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+
+    const prices = produtosZ.map(product => product.preco);
+    const total = prices.reduce((amount, price) => amount + price);
+    return total;
 }
 CalculaPrecoTotal(); // saída esperada: 180
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -79,6 +101,8 @@ function ListaObjetoAlunos() {
         { nome: "Maria", idade: 20 },
         { nome: "Pedro", idade: 22 },
     ];
+
+    return alunos.forEach(student => console.log(student.nome));
 }
 
 ListaObjetoAlunos();
@@ -91,6 +115,12 @@ function ListaObjetosProdutos() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+
+    const prices = produtosA.map(product => product.preco);
+    const total = prices.reduce((amount, price) => amount + price);
+    console.log(total);
+    return total;
+
 }
 
 ListaObjetosProdutos();
@@ -103,6 +133,10 @@ function ListaProdutoMaiorQueDez() {
         { nome: "Calça", preco: 50 },
         { nome: "Jaqueta", preco: 100 },
     ];
+
+    const allBigger = produtosB.every(product => product.preco > 10);
+    return allBigger;
+
 }
 ListaProdutoMaiorQueDez();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -110,6 +144,9 @@ ListaProdutoMaiorQueDez();
 // 11. Dada uma lista de nomes, verifique se pelo menos um deles começa com a letra "A”
 function NomeComLetraA() {
     const nomes = ["Pedro", "Ana", "Carla", "Márcio"];
+
+    const letterA = nomes.some(name => name.charAt(0) === "A");
+    return letterA;
 }
 
 NomeComLetraA();
@@ -122,6 +159,10 @@ function ArrayObjetosJoao(){
         { nome: "João", idade: 25 },
         { nome: "Maria", idade: 40 },
     ];
+
+    const name = pessoasA.find(name => name.nome === "João");
+    return name;
+
 }
 
 ArrayObjetosJoao();
@@ -134,6 +175,17 @@ function ArrayObjetosMaiorIdade(){
         { nome: "João", idade: 25 },
         { nome: "Maria", idade: 40 },
     ];
+
+    let oldest = 0;
+    pessoasB.forEach(person => {
+        if(person.idade > oldest){
+            oldest = person.idade;
+            return oldest;
+        }
+    })
+
+    return pessoasB.find(person => person.idade === oldest);
+
 }
 
 ArrayObjetosMaiorIdade();
